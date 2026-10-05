@@ -1,26 +1,18 @@
 """
 Synthetic steel-surface-defect image generator.
 
-There is no real dataset here — no network access to any real surface-
-defect dataset (e.g. the NEU-CLS benchmark) was available in this
-environment (verified: kaggle.com, github.com, and the NEU faculty
-mirror all failed to connect). Rather than skip the computer-vision
-gap or pretend a real dataset was used, this module procedurally
-generates grayscale steel-surface-style images with three classes of
-synthetic defect patterns, deliberately modeled on the real, well-known
-visual signatures of common steel surface defects:
+Procedurally generates grayscale steel-surface-style images with three
+classes of defect patterns, modeled on the visual signatures of common
+steel surface defects:
 
   - "scratch"  -- one or more thin, high-contrast linear streaks
   - "pitting"  -- a cluster of small dark circular pits
   - "patches"  -- a diffuse, blob-shaped patch of altered brightness
   - "none"     -- clean surface with only background texture/noise
 
-This is synthetic data, not a real manufacturing dataset -- disclosed
-directly, the same way every sandbox-constrained project in this
-portfolio discloses its real data sources. The point of this project is
-to demonstrate a real, working, tested computer-vision pipeline
-(image generation -> CNN training -> evaluation -> honest metrics),
-not to claim production-grade defect-detection accuracy on real steel.
+The data is synthetic. The goal is a complete, tested computer-vision
+pipeline (image generation -> CNN training -> evaluation -> metrics) that
+can be pointed at a real surface-defect dataset such as NEU-CLS.
 """
 
 import numpy as np

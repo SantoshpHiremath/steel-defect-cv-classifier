@@ -3,9 +3,7 @@ A small CNN for classifying the synthetic steel-surface-defect images
 from generate_data.py into one of four classes: none, scratch, pitting,
 patches.
 
-Real, trained PyTorch code -- no mocking of the model or training loop.
-Runs on CPU (no GPU was available in this environment: torch.cuda.is_available()
-returned False, confirmed before writing this module).
+Real, trained PyTorch code with a full training loop. Runs on CPU.
 """
 
 import numpy as np
